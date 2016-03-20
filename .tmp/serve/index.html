@@ -1,0 +1,116 @@
+<!doctype html>
+<html ng-app="lifeReg">
+  <head>
+    <meta charset="utf-8">
+    <title>LifeReg</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/index.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" href="ngprogress.css">
+      <link rel="stylesheet" href="animate.css">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div ng-include="'app/layout/header.html'"></div>
+    <div class="container-fluid overall">
+        <div class="container mainBody">
+            <div ui-view></div>
+        </div>
+    </div>
+    <div ng-include="'app/layout/footer.html'"></div>
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-messages/angular-messages.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/malarkey/dist/malarkey.min.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/admin/profiles/index.js"></script>
+    <script src="app/admin/profiles/ProfilesController.js"></script>
+    <script src="app/admin/profiles/EditorEditController.js"></script>
+    <script src="app/admin/profiles/EditorDeleteController.js"></script>
+    <script src="app/admin/profiles/EditorController.js"></script>
+    <script src="app/admin/profiles/EditorAddController.js"></script>
+    <script src="app/admin/profiles/AdminEditController.js"></script>
+    <script src="app/admin/profiles/AdminDeleteController.js"></script>
+    <script src="app/admin/profiles/AdminController.js"></script>
+    <script src="app/admin/profiles/AdminAddController.js"></script>
+    <script src="app/admin/hospital/index.js"></script>
+    <script src="app/admin/hospital/HospitalsController.js"></script>
+    <script src="app/admin/hospital/EditController.js"></script>
+    <script src="app/admin/hospital/DeleteController.js"></script>
+    <script src="app/admin/hospital/AddController.js"></script>
+    <script src="app/editor/index.js"></script>
+    <script src="app/editor/MyProfileController.js"></script>
+    <script src="app/editor/EditorHomeController.js"></script>
+    <script src="app/deathReg/index.js"></script>
+    <script src="app/deathReg/EditDeathController.js"></script>
+    <script src="app/deathReg/DeleteDeathController.js"></script>
+    <script src="app/deathReg/DeathViewController.js"></script>
+    <script src="app/deathReg/DeathRegController.js"></script>
+    <script src="app/deathReg/AddDeathController.js"></script>
+    <script src="app/birthReg/index.js"></script>
+    <script src="app/birthReg/EditBirthController.js"></script>
+    <script src="app/birthReg/DeleteBirthController.js"></script>
+    <script src="app/birthReg/BirthViewController.js"></script>
+    <script src="app/birthReg/BirthRegController.js"></script>
+    <script src="app/birthReg/AddBirthController.js"></script>
+    <script src="app/admin/index.js"></script>
+    <script src="app/admin/AdminHomeController.js"></script>
+    <script src="app/index.module.js"></script>
+    <script src="app/Services/localStorage.js"></script>
+    <script src="app/Services/User.js"></script>
+    <script src="app/Services/LifeRegStats.js"></script>
+    <script src="app/Services/Hospital.js"></script>
+    <script src="app/Services/Editor.js"></script>
+    <script src="app/Services/DeathReg.js"></script>
+    <script src="app/Services/BirthReg.js"></script>
+    <script src="app/Services/Auth.js"></script>
+    <script src="app/Services/Admin.js"></script>
+    <script src="app/index.run.js"></script>
+    <script src="app/index.route.js"></script>
+    <script src="app/index.constants.js"></script>
+    <script src="app/index.config.js"></script>
+    <script src="app/LoginController.js"></script>
+    <script src="app/HeaderController.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    <script src="bootstrap.min.js"></script>
+    <script src="ng-lodash.js"></script>
+    <script src="ngprogress.min.js"></script>
+  </body>
+</html>

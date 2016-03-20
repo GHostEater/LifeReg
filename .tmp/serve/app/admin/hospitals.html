@@ -1,0 +1,29 @@
+
+<!--Created by GHostEater on 20-Feb-16.
+-->
+<div ng-controller="HospitalsController as model">
+  <div class="row content">
+    <h3 class="col-sm-2">Hospitals</h3>
+    <button ng-click="model.add()" class="col-sm-2 btn btn-primary">Add Hospital</button>
+  </div>
+  <form class="col-sm-4">
+    <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <th>S/N</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(key,hospital) in model.hospitals | orderBy: hospital.hospital_name | filter: model.searchTerm">
+        <td>{{key + 1}}</td>
+        <td>{{hospital.hospital_name}}</td>
+        <td>
+          <button ng-click="model.edit(hospital.hospital_id)" class="btn btn-warning">Edit</button>
+          <button ng-click="model.remove(hospital.hospital_id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

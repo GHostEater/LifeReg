@@ -1,0 +1,30 @@
+//
+   Created by GHostEater on 08-Mar-16.
+div(ng-controller="BirthRegController as model")
+    .row.content
+        button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Register Birth
+    form.content.col-sm-4
+        input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+    table.table.table-striped.table-bordered
+        thead
+            th S/N
+            th Name
+            th Sex
+            th Date of Birth
+            th Father
+            th Mother
+            th.col-sm-1 Actions
+        tbody
+            tr(ng-repeat="(key,birth) in model.births | orderBy: '+last_name' | filter: model.searchTerm")
+                td {{key + 1}}
+                td {{birth.last_name}}, {{birth.first_name}}
+                td {{birth.sex}}
+                td {{birth.date_birth | date:'dd-MMM-yyyy'}}
+                td {{birth.father_name}}
+                    p {{birth.father_address}}
+                td {{birth.mother_name}}
+                    p {{birth.mother_address}}
+                td
+                    a.btn.btn-sm.btn-primary(href="#/birthreg/view/{{birth.id}}") View
+                    button.btn.btn-sm.btn-warning(ng-click="model.edit(birth.id)") Edit
+                    button.btn.btn-sm.btn-danger(ng-show="model.user.type === 1" ng-click="model.remove(birth.id)") Delete

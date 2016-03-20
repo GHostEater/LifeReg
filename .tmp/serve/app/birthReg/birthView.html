@@ -1,0 +1,70 @@
+
+<!--Created by GHostEater on 09-Mar-16.
+-->
+<div ng-controller="BirthViewController as model">
+  <div class="content">
+    <button onclick="window.history.back()" class="btn btn-warning"><span class="glyphicon glyphicon-chevron-left"></span><span>Back</span></button>
+  </div>
+  <div class="row content">
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Birth Information</div>
+        <div class="panel-body">
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th class="col-sm-3">Name</th>
+              <td>{{model.birth.last_name}}, {{model.birth.first_name}}</td>
+            </tr>
+            <tr>
+              <th>Date of Birth</th>
+              <td>{{model.birth.date_birth | date:'dd-MMM-yyyy'}}</td>
+            </tr>
+            <tr>
+              <th>Time of Birth</th>
+              <td>{{model.birth.time_birth}}</td>
+            </tr>
+            <tr>
+              <th>Sex</th>
+              <td>{{model.birth.sex}}</td>
+            </tr>
+            <tr>
+              <th>Hair Colour</th>
+              <td>{{model.birth.hair_colour}}</td>
+            </tr>
+            <tr>
+              <th>Complexion</th>
+              <td>{{model.birth.complexion}}</td>
+            </tr>
+            <tr>
+              <th>Hospital</th>
+              <td>{{model.birth.hospital_name}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Parents Information</div>
+        <div class="panel-body">
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th class="col-sm-3">Father</th>
+              <td>{{model.birth.father_name}}
+                <hr>
+                <p>{{model.birth.father_address}}</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="col-sm-3">Mother</th>
+              <td>{{model.birth.mother_name}}
+                <hr>
+                <p>{{model.birth.mother_address}}</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+
+<!--Created by GHostEater on 12-Mar-16.
+-->
+<div class="modal-header">
+  <h3 class="modal-title">Register Death</h3>
+</div>
+<div class="modal-body">
+  <form name="model.form" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Surname</label>
+      <div class="col-sm-10">
+        <input type="text" name="last_name" required ng-model="model.last_name" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Other Names</label>
+      <div class="col-sm-10">
+        <input type="text" name="first_name" required ng-model="model.first_name" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Sex</label>
+      <div class="col-sm-10">
+        <select name="sex" required ng-model="model.sex" class="form-control">
+          <option value="">-Select-</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Hair Colour</label>
+      <div class="col-sm-10">
+        <input type="text" name="hair_colour" required ng-model="model.hair_colour" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Complexion</label>
+      <div class="col-sm-10">
+        <input type="text" name="complexion" required ng-model="model.complexion" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Date of Birth</label>
+      <div class="col-sm-10">
+        <input type="date" placeholder="yyyy-mm-dd" name="date_birth" required ng-model="model.date_birth" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Date of Death</label>
+      <div class="col-sm-10">
+        <input type="date" placeholder="yyyy-mm-dd" name="date_death" required ng-model="model.date_death" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Time of Death</label>
+      <div class="col-sm-10">
+        <input type="time" placeholder="hh:mm:ss" name="time_death" required ng-model="model.time_death" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Next of Kin's Name</label>
+      <div class="col-sm-10">
+        <input type="text" name="next_kin_name" required ng-model="model.next_kin_name" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Next of Kin's Address</label>
+      <div class="col-sm-10">
+        <input type="text" name="next_kin_address" required ng-model="model.next_kin_address" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Hospital</label>
+      <div class="col-sm-10">
+        <select name="hospital" required ng-model="model.hospital_id" class="form-control">
+          <option value="">-Select-</option>
+          <option ng-repeat="hospital in model.hospitals" value="{{hospital.id}}">{{hospital.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button ng-click="model.ok()" class="btn btn-primary">Confirm</button>
+  <button ng-click="$dismiss()" class="btn btn-default">Cancel</button>
+</div>

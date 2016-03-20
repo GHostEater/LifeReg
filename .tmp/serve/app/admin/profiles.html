@@ -1,0 +1,19 @@
+
+<!--Created by GHostEater on 20-Feb-16.
+-->
+<div ng-controller="ProfilesController" class="row content">
+  <aside class="col-sm-2 affix">
+    <div class="panel panel-warning">
+      <div class="panel-heading text-center">Profile Management</div>
+      <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+          <li ui-sref-active="active"><a ui-sref="admin_profiles">Admins</a></li>
+          <li ui-sref-active="active"><a ui-sref="editor_profiles">Editors</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <section class="col-sm-10 col-sm-offset-2">
+    <div ui-view class="content"></div>
+  </section>
+</div>

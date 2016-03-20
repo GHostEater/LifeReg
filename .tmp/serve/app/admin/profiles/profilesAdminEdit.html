@@ -1,0 +1,28 @@
+
+<!--Created by GHostEater on 26-Feb-16.
+-->
+<div class="modal-header">
+  <h3 class="modal-title">Edit Admin</h3>
+</div>
+<div class="modal-body">
+  <form name="adminEditForm" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Name</label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="model.admin.name" class="form-control">
+      </div>
+      <label class="control-label col-sm-2">Username</label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="model.admin.username" class="form-control">
+      </div>
+      <label class="control-label col-sm-2">Password</label>
+      <div class="col-sm-10">
+        <input type="password" ng-model="model.admin.password" class="form-control">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button ng-click="model.ok()" class="btn btn-primary">Confirm</button>
+  <button ng-click="$dismiss()" class="btn btn-default">Cancel</button>
+</div>

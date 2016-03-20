@@ -1,0 +1,29 @@
+
+<!--Created by GHostEater on 20-Feb-16.
+-->
+<div ng-controller="AdminHomeController as model">
+  <h3>Welcome {{model.user.name}}</h3>
+  <h4>LifeReg Statistics</h4>
+  <div class="row">
+    <div class="col-sm-5">
+      <table class="table table-bordered table-striped">
+        <tr>
+          <th class="col-sm-8">Number of Admins</th>
+          <td>{{model.stats.admin}}</td>
+        </tr>
+        <tr>
+          <th>Number of Editors</th>
+          <td>{{model.stats.editor}}</td>
+        </tr>
+        <tr>
+          <th>Number of Births Registerred</th>
+          <td>{{model.stats.birthReg}}</td>
+        </tr>
+        <tr>
+          <th>Number of Deaths Registerred</th>
+          <td>{{model.stats.deathReg}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+//
+   Created by GHostEater on 12-Mar-16.
+.modal-header
+    h3.modal-title Register Death
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Surname
+            .col-sm-10
+                input.form-control(type="text" name="last_name" required ng-model="model.death.last_name")
+        .form-group
+            label.control-label.col-sm-2 Other Names
+            .col-sm-10
+                input.form-control(type="text" name="first_name" required ng-model="model.death.first_name")
+        .form-group
+            label.control-label.col-sm-2 Sex
+            .col-sm-10
+                select.form-control(name="sex" required ng-model="model.death.sex")
+                    option(value="Male") Male
+                    option(value="Female") Female
+        .form-group
+            label.control-label.col-sm-2 Hair Colour
+            .col-sm-10
+                input.form-control(type="text" name="hair_colour" required ng-model="model.death.hair_colour")
+        .form-group
+            label.control-label.col-sm-2 Complexion
+            .col-sm-10
+                input.form-control(type="text" name="complexion" required ng-model="model.death.complexion")
+        .form-group
+            label.control-label.col-sm-2 Date of Birth
+            .col-sm-10
+                input.form-control(type="text" placeholder="yyyy-mm-dd" name="date_birth" required ng-model="model.death.date_birth")
+        .form-group
+            label.control-label.col-sm-2 Date of Death
+            .col-sm-10
+                input.form-control(type="text" placeholder="yyyy-mm-dd" name="date_death" required ng-model="model.death.date_death")
+        .form-group
+            label.control-label.col-sm-2 Time of Death
+            .col-sm-10
+                input.form-control(type="text" placeholder="hh:mm:ss" name="time_death" required ng-model="model.death.time_death")
+        .form-group
+            label.control-label.col-sm-2 Next of Kin's Name
+            .col-sm-10
+                input.form-control(type="text" name="next_kin_name" required ng-model="model.death.next_kin_name")
+        .form-group
+            label.control-label.col-sm-2 Next of Kin's Address
+            .col-sm-10
+                input.form-control(type="text" name="next_kin_address" required ng-model="model.death.next_kin_address")
+        .form-group
+            label.control-label.col-sm-2 Hospital
+            .col-sm-10
+                select.form-control(name="hospital" required ng-model="model.death.hospital_id")
+                    option(value="") -Select-
+                    option(ng-repeat="hospital in model.hospitals" value="{{hospital.id}}") {{hospital.name}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
+

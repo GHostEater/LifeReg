@@ -1,0 +1,48 @@
+//
+   Created by GHostEater on 12-Mar-16.
+div(ng-controller="DeathViewController as model")
+    .content
+        button.btn.btn-warning(onclick="window.history.back()")
+            span.glyphicon.glyphicon-chevron-left
+            span Back
+    .row.content
+        .col-sm-6
+            .panel.panel-primary
+                .panel-heading Death Information
+                .panel-body
+                    table.table.table-bordered.table-striped
+                        tr
+                            th.col-sm-3 Name
+                            td {{model.death.last_name}}, {{model.death.first_name}}
+                        tr
+                            th Date of Birth
+                            td {{model.death.date_birth | date:'dd-MMM-yyyy'}}
+                        tr
+                            th Date of Death
+                            td {{model.death.date_death | date:'dd-MMM-yyyy'}}
+                        tr
+                            th Time of Death
+                            td {{model.death.time_death}}
+                        tr
+                            th Sex
+                            td {{model.death.sex}}
+                        tr
+                            th Hair Colour
+                            td {{model.death.hair_colour}}
+                        tr
+                            th Complexion
+                            td {{model.death.complexion}}
+                        tr
+                            th Hospital
+                            td {{model.death.hospital_name}}
+        .col-sm-6
+            .panel.panel-primary
+                .panel-heading Next of Kin Information
+                .panel-body
+                    table.table.table-bordered.table-striped
+                        tr
+                            th.col-sm-3 Name
+                            td {{model.death.next_kin_name}}
+                        tr
+                            th Address
+                            td {{model.death.next_kin_address}}

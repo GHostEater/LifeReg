@@ -1,0 +1,20 @@
+//
+   Created by GHostEater on 20-Feb-16.
+div(ng-controller="HospitalsController as model")
+    .row.content
+        h3.col-sm-2 Hospitals
+        button.col-sm-2.btn.btn-primary(ng-click="model.add()") Add Hospital
+    form.content.col-sm-4
+        input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+    table.table.table-striped.table-bordered
+        thead
+            th S/N
+            th Name
+            th Actions
+        tbody
+            tr(ng-repeat="(key,hospital) in model.hospitals | orderBy: '+name' | filter: model.searchTerm")
+                td {{key + 1}}
+                td {{hospital.name}}
+                td
+                    button.btn.btn-warning(ng-click="model.edit(hospital.id)") Edit
+                    button.btn.btn-danger(ng-click="model.remove(hospital.id)") Delete

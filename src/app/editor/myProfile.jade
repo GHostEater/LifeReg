@@ -1,0 +1,25 @@
+//
+   Created by GHostEater on 08-Mar-16.
+div(ng-controller="MyProfileController as model")
+    .col-sm-10
+        .content
+            button.btn.btn-lg.btn-warning(ng-click="model.edit(model.user.id)") Edit Profile
+        table.table.table-striped.table-bordered
+            tr
+                th.col-sm-2 Name
+                td {{model.user.name}}
+            tr
+                th Username
+                td {{model.user.username}}
+            tr
+                th Sex
+                td {{model.user.sex}}
+            tr
+                th E-Mail
+                td {{model.user.email}}
+            tr
+                th Date of Birth
+                td {{model.user.date_birth | date:'dd-MMM-yyyy'}}
+            tr
+                th Hospital
+                td {{model.user.hospital_name}}

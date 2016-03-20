@@ -1,0 +1,14 @@
+//
+   Created by GHostEater on 20-Feb-16.
+div.row.content(ng-controller="ProfilesController")
+    aside.col-sm-2
+        .panel.panel-warning
+            .panel-heading.text-center Profile Management
+            .panel-body
+                ul.nav.nav-pills.nav-stacked
+                    li(ui-sref-active="active")
+                        a(ui-sref="admin_profiles") Admins
+                    li(ui-sref-active="active")
+                        a(ui-sref="editor_profiles") Editors
+    section.col-sm-10
+        div.content(ui-view)

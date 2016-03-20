@@ -1,0 +1,29 @@
+//
+   Created by GHostEater on 19-Feb-16.
+div(ng-controller="LoginController as login")
+    div.row.text-center.content(ng-show="login.tell === ''")
+        button.btn.btn-lg.btn-primary.col-sm-2.col-sm-offset-3(ng-click="login.loginSelect(2)") Editor Login
+        button.btn.btn-lg.btn-primary.col-sm-2.col-sm-offset-2(ng-click="login.loginSelect(1)") Admin Login
+    .row
+        section.col-sm-4.col-sm-offset-4(ng-show="login.tell==='editor'")
+            button.btn.btn-warning.content(ng-click="login.loginSelectReset()") Back
+            form(name="editorForm")
+                .panel.panel-primary
+                    .panel-heading Editor Login
+                    .panel-body
+                        small.text-danger(ng-show="login.userError === true") Username is Incorrect
+                        input.form-control(type="text" ng-model="login.username" placeholder="Username")
+                        small.text-danger(ng-show="login.passError === true") Password is Incorrect
+                        input.form-control(type="password" ng-model="login.password" placeholder="Password")
+                        button.btn.btn-primary.form-control(ng-click="login.editorLogin(login.username,login.password)") Login
+        section.col-sm-4.col-sm-offset-4(ng-show="login.tell==='admin'")
+            button.btn.btn-warning.content(ng-click="login.loginSelectReset()") Back
+            form(name="adminForm")
+                .panel.panel-primary
+                    .panel-heading Admin Login
+                    .panel-body
+                        small.text-danger(ng-show="login.userError === true") Username is Incorrect
+                        input.form-control(type="text" ng-model="login.username" placeholder="Username")
+                        small.text-danger(ng-show="login.passError === true") Password is Incorrect
+                        input.form-control(type="password" ng-model="login.password" placeholder="Password")
+                        button.btn.btn-primary.form-control(ng-click="login.adminLogin(login.username,login.password)") Login

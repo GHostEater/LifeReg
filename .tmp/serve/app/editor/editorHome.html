@@ -1,0 +1,21 @@
+
+<!--Created by GHostEater on 08-Mar-16.
+-->
+<div ng-controller="EditorHomeController as model">
+  <h3>Welcome {{model.user.name}}</h3>
+  <h4>LifeReg Statistics</h4>
+  <div class="row">
+    <div class="col-sm-5">
+      <table class="table table-bordered table-striped">
+        <tr>
+          <th class="col-sm-8">Number of Births Registerred</th>
+          <td>{{model.stats.birthReg}}</td>
+        </tr>
+        <tr>
+          <th>Number of Deaths Registerred</th>
+          <td>{{model.stats.deathReg}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

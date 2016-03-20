@@ -1,0 +1,37 @@
+
+<!--Created by GHostEater on 19-Feb-16.
+-->
+<div ng-controller="LoginController as login">
+  <div ng-show="login.tell === ''" class="row text-center content">
+    <button ng-click="login.loginSelect(2)" class="btn btn-lg btn-primary col-sm-2 col-sm-offset-3">Editor Login</button>
+    <button ng-click="login.loginSelect(1)" class="btn btn-lg btn-primary col-sm-2 col-sm-offset-2">Admin Login</button>
+  </div>
+  <div class="row">
+    <section ng-show="login.tell==='editor'" class="col-sm-4 col-sm-offset-4">
+      <button ng-click="login.loginSelectReset()" class="btn btn-warning content">Back</button>
+      <form name="editorForm">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Editor Login</div>
+          <div class="panel-body"><small ng-show="login.userError === true" class="text-danger">Username is Incorrect</small>
+            <input type="text" ng-model="login.username" placeholder="Username" class="form-control"><small ng-show="login.passError === true" class="text-danger">Password is Incorrect</small>
+            <input type="password" ng-model="login.password" placeholder="Password" class="form-control">
+            <button ng-click="login.editorLogin(login.username,login.password)" class="btn btn-primary form-control">Login</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section ng-show="login.tell==='admin'" class="col-sm-4 col-sm-offset-4">
+      <button ng-click="login.loginSelectReset()" class="btn btn-warning content">Back</button>
+      <form name="adminForm">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Admin Login</div>
+          <div class="panel-body"><small ng-show="login.userError === true" class="text-danger">Username is Incorrect</small>
+            <input type="text" ng-model="login.username" placeholder="Username" class="form-control"><small ng-show="login.passError === true" class="text-danger">Password is Incorrect</small>
+            <input type="password" ng-model="login.password" placeholder="Password" class="form-control">
+            <button ng-click="login.adminLogin(login.username,login.password)" class="btn btn-primary form-control">Login</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

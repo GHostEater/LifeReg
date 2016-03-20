@@ -1,0 +1,32 @@
+/*MainBody Styles*/
+.overall{
+  padding: 0;
+  background-color: rgba(52,166,232,0.6);
+}
+.mainBody{
+  margin: 0 30px 0 30px;
+  padding-top: 20px;
+  background: #ffffff;
+}
+.content{
+  padding: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+.list-item{
+  opacity: 0.9;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.list-item.ng-enter.ng-enter-active,
+.list-item.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+.list-item.ng-leave.ng-leave-active,
+.list-item.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+//
+   Created by GHostEater on 26-Feb-16.
+.modal-header
+    h3.modal-title Edit Admin
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Name
+            .col-sm-10
+                input.form-control(type="text" name="name" required ng-model="model.admin.name")
+        .form-group
+            label.control-label.col-sm-2 Username
+            .col-sm-10
+                input.form-control(type="text" name="username" required ng-model="model.admin.username")
+        .form-group
+            label.control-label.col-sm-2 Password
+            .col-sm-10
+                input.form-control(type="password" name="password" required ng-model="model.admin.password")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
+

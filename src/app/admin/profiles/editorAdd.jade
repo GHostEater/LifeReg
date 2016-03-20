@@ -1,0 +1,43 @@
+//
+   Created by GHostEater on 06-Mar-16.
+.modal-header
+    h3.modal-title Add Editor
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Name
+            .col-sm-10
+                input.form-control(type="text" name="name" required ng-model="model.name")
+        .form-group
+            label.control-label.col-sm-2 Username
+            .col-sm-10
+                input.form-control(type="text" name="username" required ng-model="model.username")
+        .form-group
+            label.control-label.col-sm-2 Password
+            .col-sm-10
+                input.form-control(type="password" name="password" required ng-model="model.password")
+        .form-group
+            label.control-label.col-sm-2 E-Mail
+            .col-sm-10
+                input.form-control(type="text" name="email" required ng-model="model.email")
+        .form-group
+            label.control-label.col-sm-2 Sex
+            .col-sm-10
+                select.form-control(name="sex" required ng-model="model.sex")
+                    option(value="") -Select-
+                    option(value="Male") Male
+                    option(value="Female") Female
+        .form-group
+            label.control-label.col-sm-2 Date of Birth
+            .col-sm-10
+                input.form-control(type="date" name="date_birth" placeholder="yyyy-mm-dd" ng-model="model.date_birth")
+        .form-group
+            label.control-label.col-sm-2 Hospital
+            .col-sm-10
+                select.form-control(name="hospital" required ng-model="model.hospital_id")
+                    option(value="") -Select-
+                    option(ng-repeat="hospital in model.hospitals" value="{{hospital.id}}") {{hospital.name}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
+

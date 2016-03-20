@@ -1,0 +1,31 @@
+
+<!--Created by GHostEater on 26-Feb-16.
+-->
+<div ng-controller="ProfilesAdminController as model">
+  <div class="row content">
+    <h3 class="col-sm-2">Admins</h3>
+    <button ng-click="model.add()" class="col-sm-2 btn btn-primary">Add Admin</button>
+  </div>
+  <form class="col-sm-4">
+    <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <th>S/N</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(key,admin) in model.admins | orderBy: admin.name | filter: model.searchTerm">
+        <td>{{key + 1}}</td>
+        <td>{{admin.name}}</td>
+        <td>{{admin.username}}</td>
+        <td>
+          <button ng-click="model.edit(admin.id)" class="btn btn-warning">Edit</button>
+          <button ng-click="model.remove(admin.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

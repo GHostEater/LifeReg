@@ -1,0 +1,20 @@
+//
+   Created by GHostEater on 20-Feb-16.
+div(ng-controller="AdminHomeController as model")
+    h3 Welcome {{model.user.name}}
+    h4 LifeReg Statistics
+    .row
+        .col-sm-5
+            table.table.table-bordered.table-striped
+                tr
+                    th.col-sm-8 Number of Admins
+                    td {{model.stats.admin}}
+                tr
+                    th Number of Editors
+                    td {{model.stats.editor}}
+                tr
+                    th Number of Births Registerred
+                    td {{model.stats.birthReg}}
+                tr
+                    th Number of Deaths Registerred
+                    td {{model.stats.deathReg}}

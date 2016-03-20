@@ -1,0 +1,49 @@
+//
+   Created by GHostEater on 09-Mar-16.
+div(ng-controller="BirthViewController as model")
+    .content
+        button.btn.btn-warning(onclick="window.history.back()")
+            span.glyphicon.glyphicon-chevron-left
+            span Back
+    .row.content
+        .col-sm-6
+            .panel.panel-primary
+                .panel-heading Birth Information
+                .panel-body
+                    table.table.table-bordered.table-striped
+                        tr
+                            th.col-sm-3 Name
+                            td {{model.birth.last_name}}, {{model.birth.first_name}}
+                        tr
+                            th Date of Birth
+                            td {{model.birth.date_birth | date:'dd-MMM-yyyy'}}
+                        tr
+                            th Time of Birth
+                            td {{model.birth.time_birth}}
+                        tr
+                            th Sex
+                            td {{model.birth.sex}}
+                        tr
+                            th Hair Colour
+                            td {{model.birth.hair_colour}}
+                        tr
+                            th Complexion
+                            td {{model.birth.complexion}}
+                        tr
+                            th Hospital
+                            td {{model.birth.hospital_name}}
+        .col-sm-6
+            .panel.panel-primary
+                .panel-heading Parents Information
+                .panel-body
+                    table.table.table-bordered.table-striped
+                        tr
+                            th.col-sm-3 Father
+                            td {{model.birth.father_name}}
+                                hr
+                                p {{model.birth.father_address}}
+                        tr
+                            th.col-sm-3 Mother
+                            td {{model.birth.mother_name}}
+                                hr
+                                p {{model.birth.mother_address}}

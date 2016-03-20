@@ -1,0 +1,29 @@
+//
+   Created by GHostEater on 04-Mar-16.
+div.content(ng-controller="EditorController as model")
+    .row.content
+        button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Editor
+    form.content.col-sm-4
+        input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+    table.table.table-striped.table-bordered
+        thead
+            th S/N
+            th Name
+            th Username
+            th Email
+            th Sex
+            th Date of Birth
+            th Hospital
+            th Actions
+        tbody
+            tr(ng-repeat="(key,editor) in model.editors | orderBy: '+name' | filter: model.searchTerm")
+                td {{key + 1}}
+                td {{editor.name}}
+                td {{editor.username}}
+                td {{editor.email}}
+                td {{editor.sex}}
+                td {{editor.date_birth | date:'dd-MMM-yyyy'}}
+                td {{editor.hospital_name}}
+                td
+                    button.btn.btn-warning(ng-click="model.edit(editor.id)") Edit
+                    button.btn.btn-danger(ng-click="model.remove(editor.id)") Delete
